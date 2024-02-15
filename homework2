@@ -149,25 +149,20 @@ def question4():
     answer["a"] = ['binary','Qualitative','nominal']
 
     # Explain if there is more than one interpretation. Repeat for the other questions. At least five words that form a sentence.
-    answer["a: explain"] = "Binary: It can be classified as binary since it has two possible values: AM or PM "
-    answer["a: explain"] = "Qualitative: It is qualitative because it represents a category rather than a numerical value "
+    answer["a: explain"] = "Binary: It can be classified as binary since it has two possible values: AM or PM. Qualitative: It is qualitative because it represents a category rather than a numerical value "
 
 
     answer["b"] = ['Continuous','Quantitative','ratio']
-    answer["b: explain"] = "Continuous: Brightness can vary across a continuous range of values."
-    answer["b: explain"] ="Quantitative: It is quantitative because it represents a measurable quantity."
+    answer["b: explain"] = "Continuous: Brightness can vary across a continuous range of values. Quantitative: It is quantitative because it represents a measurable quantity."
     
     answer["c"] = ['Discrete','Qualitative','nominal']
-    answer["c: explain"] = "Discrete: People's judgments of brightness are typically discrete, as they are subjective and can only be expressed in certain categories"
-    answer["c: explain"] = "Qualitative: It is qualitative because it representts subjective evaluations rather than a numerical measuremen"
+    answer["c: explain"] = "Discrete: People's judgments of brightness are typically discrete, as they are subjective and can only be expressed in certain categories."Qualitative: It is qualitative because it representts subjective evaluations rather than a numerical measuremen"
 
     answer["d"] = ['Continuous','Quantitative','ratio']
-    answer["d: explain"] = "Continuous: Angles can theoretically take on any value within a continuous range"
-    answer["d: explain"] = "Quantitative: It is quantitative because it represents a measurable quantity."
+    answer["d: explain"] = "Continuous: Angles can theoretically take on any value within a continuous range.Quantitative: It is quantitative because it represents a measurable quantity."
     
     answer["e"] = ['Nominal','Qualitative','nominal']
-    answer["e: explain"] = "Nominal: These medals represent categories without any inherent order"
-    answer["e: explain"] = "Qualitative: It is qualitative because it represents categories without numerical values."
+    answer["e: explain"] = "Nominal: These medals represent categories without any inherent order. Qualitative: It is qualitative because it represents categories without numerical values."
     
     answer["f"] = ['Continuous','Quantitative','ratio']
     answer["f: explain"] = "Continuous: Height above sea level can vary continuously.Quantitative: It is quantitative because it represents a measurable quantity."
@@ -203,18 +198,18 @@ def question5():
     # Read appropriate section of book chapter 3
 
     # string: one of 'Model 1' or 'Model 2'
-    explain["a"] = ""
-    explain["a explain"] = ""
+    explain["a"] = "Model 2"
+    explain["a explain"] = "Model 1 exhibits a significant drop in accuracy from the training dataset (0.98) to the testing dataset (0.72). This large discrepancy indicates overfitting to the training data.2.Pruning a decision tree involves removing parts of the tree that do not provide additional power to classify instances. This process helps in reducing the complexity of the model, making it more robust to noise and thereby enhancing its ability to generalize from the training data to unseen data. "
 
     # string: one of 'Model 1' or 'Model 2'
-    explain["b"] = ""
-    explain["b explain"] = ""
+    explain["b"] = "Model 1"
+    explain["b explain"] = "Given the performance on the entire dataset (A + B), my choice would lean towards Model 1 in scenarios where maximizing overall accuracy is crucial, acknowledging its potential for overfitting but also recognizing its superior ability to classify correctly across a broader dataset."
 
-    explain["c similarity"] = ""
-    explain["c similarity explain"] = ""
+    explain["c similarity"] = "Aim to Reduce Overfitting"
+    explain["c similarity explain"] = " By considering model complexity, both techniques discourage overly complex trees that fit the training data too closely, thus promoting better generalization to new data."
 
-    explain["c difference"] = ""
-    explain["c difference explain"] = ""
+    explain["c difference"] = "difference"
+    explain["c difference explain"] = "The primary difference between MDL and pessimistic error estimates lies in their approach to accounting for model complexity."
 
     return explain
 
@@ -228,16 +223,16 @@ def question6():
     # value of the form "z <= float" where "z" is "x" or "y"
     #  and "float" is a floating point number (notice: <=)
     # The value could also be "A" or "B" if it is a leaf
-    answer["a, level 1"] = ""
-    answer["a, level 2, right"] =""
-    answer["a, level 2, left"] = ""
-    answer["a, level 3, left"] = ""
-    answer["a, level 3, right"] = ""
+    answer["a, level 1"] = "0.5"
+    answer["a, level 2, right"] ="A"
+    answer["a, level 2, left"] = "y <= 0.4"
+    answer["a, level 3, left"] = "A"
+    answer["a, level 3, right"] = "B"
 
     # run each datum through the tree. Count the number of errors and divide by number of samples. .
     # Since we have areas: calculate the area that is misclassified (total area is unity)
     # float between 0 and 1
-    answer["b, expected error"] = 0.
+    answer["b, expected error"] = 0.06
 
     # Use u.BinaryTree to define the tree. Create your tree.
     # Replace "root node" by the proper node of the form "z <= float"
@@ -247,27 +242,27 @@ def question6():
 
     return answer
 
-
 # ----------------------------------------------------------------------
 def question7():
     answer = {}
 
     # float
-    answer["a, info gain, ID"] = 0.
-    answer["b, info gain, Handedness"] = 0.
+    answer["a, info gain, ID"] = 1
+    answer["b, info gain, Handedness"] = 0.531
 
     # string: "ID" or "Handedness"
-    answer["c, which attrib"] = ""
+    answer["c, which attrib"] = "ID"
 
     # answer is a float
-    answer["d, gain ratio, ID"] = 0.
-    answer["e, gain ratio, Handedness"] = 0.
+    answer["d, gain ratio, ID"] = 0.231
+    answer["e, gain ratio, Handedness"] = 0.531
 
     # string: one of 'ID' or 'Handedness' based on gain ratio
     # choose the attribute with the largest gain ratio
-    answer["f, which attrib"] = ""
+    answer["f, which attrib"] = "Handedness"
 
     return answer
+
 
 
 # ----------------------------------------------------------------------
