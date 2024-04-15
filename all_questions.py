@@ -74,7 +74,7 @@ def question1():
     B.insert_left("yes")
     B.insert_right("no")
 
-answer["tree"] = tree
+    answer["tree"] = tree
     tree = u.BinaryTree("root")  # MUST STILL CREATE THE TREE *****
     answer["tree"] = tree  # use the Tree structure
     # answer["training_error"] = training_error
